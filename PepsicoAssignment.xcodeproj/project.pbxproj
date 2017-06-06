@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		155A35841EE6D2AA006F1843 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35831EE6D2AA006F1843 /* main.m */; };
+		155A35871EE6D2AA006F1843 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35861EE6D2AA006F1843 /* AppDelegate.m */; };
+		155A35901EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 155A358E1EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodeld */; };
+		155A35921EE6D2AB006F1843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 155A35911EE6D2AB006F1843 /* Assets.xcassets */; };
+		155A35951EE6D2AB006F1843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155A35931EE6D2AB006F1843 /* LaunchScreen.storyboard */; };
+		155A359F1EE6D345006F1843 /* FirstScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A359D1EE6D345006F1843 /* FirstScreenViewController.m */; };
+		155A35A01EE6D345006F1843 /* FirstScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155A359E1EE6D345006F1843 /* FirstScreenViewController.xib */; };
+		155A35C91EE6E02F006F1843 /* UserAddress+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35C61EE6E02F006F1843 /* UserAddress+CoreDataClass.m */; };
+		155A35CA1EE6E02F006F1843 /* UserAddress+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35C81EE6E02F006F1843 /* UserAddress+CoreDataProperties.m */; };
+		155A35CF1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35CC1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.m */; };
+		155A35D01EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35CE1EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.m */; };
+		155A35D51EE6E060006F1843 /* UserDetail+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D21EE6E060006F1843 /* UserDetail+CoreDataClass.m */; };
+		155A35D61EE6E060006F1843 /* UserDetail+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D41EE6E060006F1843 /* UserDetail+CoreDataProperties.m */; };
+		155A35DA1EE6ED95006F1843 /* ServiceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D91EE6ED95006F1843 /* ServiceClass.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		155A357F1EE6D2AA006F1843 /* PepsicoAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PepsicoAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		155A35831EE6D2AA006F1843 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		155A35851EE6D2AA006F1843 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		155A35861EE6D2AA006F1843 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		155A358F1EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PepsicoAssignment.xcdatamodel; sourceTree = "<group>"; };
+		155A35911EE6D2AB006F1843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		155A35941EE6D2AB006F1843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		155A35961EE6D2AB006F1843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		155A359C1EE6D345006F1843 /* FirstScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstScreenViewController.h; sourceTree = "<group>"; };
+		155A359D1EE6D345006F1843 /* FirstScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstScreenViewController.m; sourceTree = "<group>"; };
+		155A359E1EE6D345006F1843 /* FirstScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstScreenViewController.xib; sourceTree = "<group>"; };
+		155A35C51EE6E02F006F1843 /* UserAddress+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserAddress+CoreDataClass.h"; sourceTree = "<group>"; };
+		155A35C61EE6E02F006F1843 /* UserAddress+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserAddress+CoreDataClass.m"; sourceTree = "<group>"; };
+		155A35C71EE6E02F006F1843 /* UserAddress+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserAddress+CoreDataProperties.h"; sourceTree = "<group>"; };
+		155A35C81EE6E02F006F1843 /* UserAddress+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserAddress+CoreDataProperties.m"; sourceTree = "<group>"; };
+		155A35CB1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserCompanyDetail+CoreDataClass.h"; sourceTree = "<group>"; };
+		155A35CC1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserCompanyDetail+CoreDataClass.m"; sourceTree = "<group>"; };
+		155A35CD1EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserCompanyDetail+CoreDataProperties.h"; sourceTree = "<group>"; };
+		155A35CE1EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserCompanyDetail+CoreDataProperties.m"; sourceTree = "<group>"; };
+		155A35D11EE6E060006F1843 /* UserDetail+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserDetail+CoreDataClass.h"; sourceTree = "<group>"; };
+		155A35D21EE6E060006F1843 /* UserDetail+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserDetail+CoreDataClass.m"; sourceTree = "<group>"; };
+		155A35D31EE6E060006F1843 /* UserDetail+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UserDetail+CoreDataProperties.h"; sourceTree = "<group>"; };
+		155A35D41EE6E060006F1843 /* UserDetail+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserDetail+CoreDataProperties.m"; sourceTree = "<group>"; };
+		155A35D81EE6ED95006F1843 /* ServiceClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceClass.h; sourceTree = "<group>"; };
+		155A35D91EE6ED95006F1843 /* ServiceClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceClass.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		155A357C1EE6D2A9006F1843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		155A35761EE6D2A9006F1843 = {
+			isa = PBXGroup;
+			children = (
+				155A35D71EE6EC31006F1843 /* CoreData */,
+				155A35811EE6D2AA006F1843 /* PepsicoAssignment */,
+				155A35801EE6D2AA006F1843 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		155A35801EE6D2AA006F1843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				155A357F1EE6D2AA006F1843 /* PepsicoAssignment.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		155A35811EE6D2AA006F1843 /* PepsicoAssignment */ = {
+			isa = PBXGroup;
+			children = (
+				155A35851EE6D2AA006F1843 /* AppDelegate.h */,
+				155A35861EE6D2AA006F1843 /* AppDelegate.m */,
+				155A35911EE6D2AB006F1843 /* Assets.xcassets */,
+				155A35931EE6D2AB006F1843 /* LaunchScreen.storyboard */,
+				155A35961EE6D2AB006F1843 /* Info.plist */,
+				155A358E1EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodeld */,
+				155A35821EE6D2AA006F1843 /* Supporting Files */,
+				155A359C1EE6D345006F1843 /* FirstScreenViewController.h */,
+				155A359D1EE6D345006F1843 /* FirstScreenViewController.m */,
+				155A359E1EE6D345006F1843 /* FirstScreenViewController.xib */,
+				155A35D81EE6ED95006F1843 /* ServiceClass.h */,
+				155A35D91EE6ED95006F1843 /* ServiceClass.m */,
+			);
+			path = PepsicoAssignment;
+			sourceTree = "<group>";
+		};
+		155A35821EE6D2AA006F1843 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				155A35831EE6D2AA006F1843 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		155A35D71EE6EC31006F1843 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				155A35D11EE6E060006F1843 /* UserDetail+CoreDataClass.h */,
+				155A35D21EE6E060006F1843 /* UserDetail+CoreDataClass.m */,
+				155A35D31EE6E060006F1843 /* UserDetail+CoreDataProperties.h */,
+				155A35D41EE6E060006F1843 /* UserDetail+CoreDataProperties.m */,
+				155A35CB1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.h */,
+				155A35CC1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.m */,
+				155A35CD1EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.h */,
+				155A35CE1EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.m */,
+				155A35C51EE6E02F006F1843 /* UserAddress+CoreDataClass.h */,
+				155A35C61EE6E02F006F1843 /* UserAddress+CoreDataClass.m */,
+				155A35C71EE6E02F006F1843 /* UserAddress+CoreDataProperties.h */,
+				155A35C81EE6E02F006F1843 /* UserAddress+CoreDataProperties.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		155A357E1EE6D2A9006F1843 /* PepsicoAssignment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 155A35991EE6D2AB006F1843 /* Build configuration list for PBXNativeTarget "PepsicoAssignment" */;
+			buildPhases = (
+				155A357B1EE6D2A9006F1843 /* Sources */,
+				155A357C1EE6D2A9006F1843 /* Frameworks */,
+				155A357D1EE6D2A9006F1843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PepsicoAssignment;
+			productName = PepsicoAssignment;
+			productReference = 155A357F1EE6D2AA006F1843 /* PepsicoAssignment.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		155A35771EE6D2A9006F1843 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = CTS;
+				TargetAttributes = {
+					155A357E1EE6D2A9006F1843 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 155A357A1EE6D2A9006F1843 /* Build configuration list for PBXProject "PepsicoAssignment" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 155A35761EE6D2A9006F1843;
+			productRefGroup = 155A35801EE6D2AA006F1843 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				155A357E1EE6D2A9006F1843 /* PepsicoAssignment */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		155A357D1EE6D2A9006F1843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155A35A01EE6D345006F1843 /* FirstScreenViewController.xib in Resources */,
+				155A35951EE6D2AB006F1843 /* LaunchScreen.storyboard in Resources */,
+				155A35921EE6D2AB006F1843 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		155A357B1EE6D2A9006F1843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155A35871EE6D2AA006F1843 /* AppDelegate.m in Sources */,
+				155A35D51EE6E060006F1843 /* UserDetail+CoreDataClass.m in Sources */,
+				155A35DA1EE6ED95006F1843 /* ServiceClass.m in Sources */,
+				155A359F1EE6D345006F1843 /* FirstScreenViewController.m in Sources */,
+				155A35CA1EE6E02F006F1843 /* UserAddress+CoreDataProperties.m in Sources */,
+				155A35901EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodeld in Sources */,
+				155A35C91EE6E02F006F1843 /* UserAddress+CoreDataClass.m in Sources */,
+				155A35D01EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.m in Sources */,
+				155A35D61EE6E060006F1843 /* UserDetail+CoreDataProperties.m in Sources */,
+				155A35CF1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.m in Sources */,
+				155A35841EE6D2AA006F1843 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		155A35931EE6D2AB006F1843 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				155A35941EE6D2AB006F1843 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		155A35971EE6D2AB006F1843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		155A35981EE6D2AB006F1843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		155A359A1EE6D2AB006F1843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PepsicoAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PepsicoAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		155A359B1EE6D2AB006F1843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PepsicoAssignment/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PepsicoAssignment;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		155A357A1EE6D2A9006F1843 /* Build configuration list for PBXProject "PepsicoAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155A35971EE6D2AB006F1843 /* Debug */,
+				155A35981EE6D2AB006F1843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		155A35991EE6D2AB006F1843 /* Build configuration list for PBXNativeTarget "PepsicoAssignment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155A359A1EE6D2AB006F1843 /* Debug */,
+				155A359B1EE6D2AB006F1843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		155A358E1EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				155A358F1EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodel */,
+			);
+			currentVersion = 155A358F1EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodel */;
+			path = PepsicoAssignment.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 155A35771EE6D2A9006F1843 /* Project object */;
+}
