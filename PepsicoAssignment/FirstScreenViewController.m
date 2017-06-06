@@ -25,8 +25,13 @@
     [super viewDidLoad];
     self.title = @"Home";
     self.responseArray = [[NSArray alloc] init];
+    
     self.tblView.delegate = self;
     self.tblView.dataSource = self;
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    
     self.tblView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     self.tblView.layer.borderWidth = 2.0;
     self.tblView.layer.borderColor = [UIColor grayColor].CGColor;
@@ -94,6 +99,23 @@
     SecondScreenViewController *secondScreenViewController = [[SecondScreenViewController alloc] initWithNibName:@"SecondScreenViewController" bundle:nil];
     [self.navigationController pushViewController:secondScreenViewController animated:YES];
 }
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.responseArray.count;
+}
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *identifier = @"Cell";
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
+    
+    cell.textLabel.text = [self.responseArray[indexPath.row] valueForKey:@"name"];
+    cell.detailTextLabel.text = [self.responseArray[indexPath.row] valueForKey:@"email"];
+    
+    return cell;
+}
+
 - (IBAction)segmentTappedAction:(id)sender {
 }
 @end
