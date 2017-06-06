@@ -9,41 +9,58 @@
 #import "FirstScreenViewController.h"
 #import "ServiceClass.h"
 #import <CoreData/CoreData.h>
+#import "SecondScreenViewController.h"
 
-@interface FirstScreenViewController ()
+@interface FirstScreenViewController (){
+    UIActivityIndicatorView *activityView;
+}
 
 @property (nonatomic,strong) ServiceClass *serviceClass;
+@property (nonatomic,strong) NSArray *responseArray;
 @end
 
 @implementation FirstScreenViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"Home";
+    self.responseArray = [[NSArray alloc] init];
     self.tblView.delegate = self;
-//    self.serviceClass = [ServiceClass sharedManager];
+    self.tblView.dataSource = self;
+    self.tblView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tblView.layer.borderWidth = 2.0;
+    self.tblView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    activityView = [[UIActivityIndicatorView alloc]
+                                             initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    
+    activityView.center=self.view.center;
+    [activityView startAnimating];
+    [self.view addSubview:activityView];
+    
+    
     [self loadUserNameAndEmail];
 }
 
 - (void)loadUserNameAndEmail
 {
-//    [[ServiceClass sharedManager] getUserDetails:^(NSDictionary *dictData){
-//        
-//        NSDictionary *userData = [[NSDictionary alloc] initWithDictionary:dictData];
-//
-//    }];
-    
-    [[ServiceClass sharedManager] getJsonResponse:@"https://jsonplaceholder.typicode.com/users" success:^(NSArray *responseDict) {
-        NSLog(@"%@",responseDict);
-            NSLog(@"%@", [responseDict[0] valueForKey:@"name"]);
-            NSLog(@"%@", [responseDict[0] valueForKey:@"email"]);
 
+    [[ServiceClass sharedManager] getJsonResponse:@"https://jsonplaceholder.typicode.com/users" success:^(NSArray *responseArry) {
+        NSLog(@"%@",responseArry);
+        self.responseArray = responseArry;
+            NSLog(@"%@", [responseArry[0] valueForKey:@"name"]);
+            NSLog(@"%@", [responseArry[0] valueForKey:@"email"]);
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [activityView stopAnimating];
+            [self.tblView reloadData];
+        });
             NSManagedObjectContext *context = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).persistentContainer.viewContext;
             
             
             NSManagedObject *userDetailObj = [NSEntityDescription insertNewObjectForEntityForName:@"UserDetail" inManagedObjectContext:context];
-            [userDetailObj setValue:[responseDict[0] valueForKey:@"name"] forKey:@"name"];
-            [userDetailObj setValue:[responseDict[0] valueForKey:@"email"] forKey:@"emailID"];
+            [userDetailObj setValue:[responseArry[0] valueForKey:@"name"] forKey:@"name"];
+            [userDetailObj setValue:[responseArry[0] valueForKey:@"email"] forKey:@"emailID"];
             NSError *error = nil;
             // Save the object to persistent store
             if (![context save:&error]) {
@@ -58,15 +75,25 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.responseArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyIdentifier"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"MyIdentifier"];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.text = [self.responseArray[indexPath.row] valueForKey:@"name"];
+        cell.detailTextLabel.text = [self.responseArray[indexPath.row] valueForKey:@"email"];
+    }
     return cell;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    SecondScreenViewController *secondScreenViewController = [[SecondScreenViewController alloc] initWithNibName:@"SecondScreenViewController" bundle:nil];
+    [self.navigationController pushViewController:secondScreenViewController animated:YES];
+}
 - (IBAction)segmentTappedAction:(id)sender {
 }
 @end

@@ -21,6 +21,8 @@
 		155A35D51EE6E060006F1843 /* UserDetail+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D21EE6E060006F1843 /* UserDetail+CoreDataClass.m */; };
 		155A35D61EE6E060006F1843 /* UserDetail+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D41EE6E060006F1843 /* UserDetail+CoreDataProperties.m */; };
 		155A35DA1EE6ED95006F1843 /* ServiceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D91EE6ED95006F1843 /* ServiceClass.m */; };
+		BE1A2D831EE73BC200D84431 /* SecondScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1A2D811EE73BC200D84431 /* SecondScreenViewController.m */; };
+		BE1A2D841EE73BC200D84431 /* SecondScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1A2D821EE73BC200D84431 /* SecondScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,9 @@
 		155A35D41EE6E060006F1843 /* UserDetail+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserDetail+CoreDataProperties.m"; sourceTree = "<group>"; };
 		155A35D81EE6ED95006F1843 /* ServiceClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceClass.h; sourceTree = "<group>"; };
 		155A35D91EE6ED95006F1843 /* ServiceClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceClass.m; sourceTree = "<group>"; };
+		BE1A2D801EE73BC200D84431 /* SecondScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondScreenViewController.h; sourceTree = "<group>"; };
+		BE1A2D811EE73BC200D84431 /* SecondScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondScreenViewController.m; sourceTree = "<group>"; };
+		BE1A2D821EE73BC200D84431 /* SecondScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,9 @@
 				155A359E1EE6D345006F1843 /* FirstScreenViewController.xib */,
 				155A35D81EE6ED95006F1843 /* ServiceClass.h */,
 				155A35D91EE6ED95006F1843 /* ServiceClass.m */,
+				BE1A2D801EE73BC200D84431 /* SecondScreenViewController.h */,
+				BE1A2D811EE73BC200D84431 /* SecondScreenViewController.m */,
+				BE1A2D821EE73BC200D84431 /* SecondScreenViewController.xib */,
 			);
 			path = PepsicoAssignment;
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 			files = (
 				155A35A01EE6D345006F1843 /* FirstScreenViewController.xib in Resources */,
 				155A35951EE6D2AB006F1843 /* LaunchScreen.storyboard in Resources */,
+				BE1A2D841EE73BC200D84431 /* SecondScreenViewController.xib in Resources */,
 				155A35921EE6D2AB006F1843 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,6 +207,7 @@
 			files = (
 				155A35871EE6D2AA006F1843 /* AppDelegate.m in Sources */,
 				155A35D51EE6E060006F1843 /* UserDetail+CoreDataClass.m in Sources */,
+				BE1A2D831EE73BC200D84431 /* SecondScreenViewController.m in Sources */,
 				155A35DA1EE6ED95006F1843 /* ServiceClass.m in Sources */,
 				155A359F1EE6D345006F1843 /* FirstScreenViewController.m in Sources */,
 				155A35CA1EE6E02F006F1843 /* UserAddress+CoreDataProperties.m in Sources */,
@@ -355,6 +365,7 @@
 				155A359B1EE6D2AB006F1843 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
