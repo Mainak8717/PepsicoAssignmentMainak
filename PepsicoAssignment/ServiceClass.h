@@ -11,6 +11,5 @@
 @interface ServiceClass : NSObject
 
 + (id)sharedManager;
--(void) getUserDetails:(void (^)(NSDictionary *dictData))callback;
 -(void)getJsonResponse:(NSString *)urlStr success:(void (^)(NSArray *responseDict))success failure:(void(^)(NSError* error))failure;
 @end

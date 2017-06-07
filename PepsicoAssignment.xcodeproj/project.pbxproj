@@ -21,6 +21,9 @@
 		155A35D51EE6E060006F1843 /* UserDetail+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D21EE6E060006F1843 /* UserDetail+CoreDataClass.m */; };
 		155A35D61EE6E060006F1843 /* UserDetail+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D41EE6E060006F1843 /* UserDetail+CoreDataProperties.m */; };
 		155A35DA1EE6ED95006F1843 /* ServiceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35D91EE6ED95006F1843 /* ServiceClass.m */; };
+		155A35DE1EE7C557006F1843 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35DC1EE7C557006F1843 /* CollectionViewCell.m */; };
+		155A35DF1EE7C557006F1843 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155A35DD1EE7C557006F1843 /* CollectionViewCell.xib */; };
+		155A35E31EE7EEA5006F1843 /* FetchDBDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 155A35E21EE7EEA5006F1843 /* FetchDBDataClass.m */; };
 		BE1A2D831EE73BC200D84431 /* SecondScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1A2D811EE73BC200D84431 /* SecondScreenViewController.m */; };
 		BE1A2D841EE73BC200D84431 /* SecondScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE1A2D821EE73BC200D84431 /* SecondScreenViewController.xib */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,11 @@
 		155A35D41EE6E060006F1843 /* UserDetail+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UserDetail+CoreDataProperties.m"; sourceTree = "<group>"; };
 		155A35D81EE6ED95006F1843 /* ServiceClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceClass.h; sourceTree = "<group>"; };
 		155A35D91EE6ED95006F1843 /* ServiceClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceClass.m; sourceTree = "<group>"; };
+		155A35DB1EE7C557006F1843 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		155A35DC1EE7C557006F1843 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		155A35DD1EE7C557006F1843 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		155A35E11EE7EEA5006F1843 /* FetchDBDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchDBDataClass.h; sourceTree = "<group>"; };
+		155A35E21EE7EEA5006F1843 /* FetchDBDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchDBDataClass.m; sourceTree = "<group>"; };
 		BE1A2D801EE73BC200D84431 /* SecondScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondScreenViewController.h; sourceTree = "<group>"; };
 		BE1A2D811EE73BC200D84431 /* SecondScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondScreenViewController.m; sourceTree = "<group>"; };
 		BE1A2D821EE73BC200D84431 /* SecondScreenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondScreenViewController.xib; sourceTree = "<group>"; };
@@ -87,6 +95,7 @@
 		155A35811EE6D2AA006F1843 /* PepsicoAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				155A35E01EE7EE71006F1843 /* Data Access Layer */,
 				155A35851EE6D2AA006F1843 /* AppDelegate.h */,
 				155A35861EE6D2AA006F1843 /* AppDelegate.m */,
 				155A35911EE6D2AB006F1843 /* Assets.xcassets */,
@@ -102,6 +111,9 @@
 				BE1A2D801EE73BC200D84431 /* SecondScreenViewController.h */,
 				BE1A2D811EE73BC200D84431 /* SecondScreenViewController.m */,
 				BE1A2D821EE73BC200D84431 /* SecondScreenViewController.xib */,
+				155A35DB1EE7C557006F1843 /* CollectionViewCell.h */,
+				155A35DC1EE7C557006F1843 /* CollectionViewCell.m */,
+				155A35DD1EE7C557006F1843 /* CollectionViewCell.xib */,
 			);
 			path = PepsicoAssignment;
 			sourceTree = "<group>";
@@ -131,6 +143,15 @@
 				155A35C81EE6E02F006F1843 /* UserAddress+CoreDataProperties.m */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		155A35E01EE7EE71006F1843 /* Data Access Layer */ = {
+			isa = PBXGroup;
+			children = (
+				155A35E11EE7EEA5006F1843 /* FetchDBDataClass.h */,
+				155A35E21EE7EEA5006F1843 /* FetchDBDataClass.m */,
+			);
+			name = "Data Access Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +216,7 @@
 				155A35951EE6D2AB006F1843 /* LaunchScreen.storyboard in Resources */,
 				BE1A2D841EE73BC200D84431 /* SecondScreenViewController.xib in Resources */,
 				155A35921EE6D2AB006F1843 /* Assets.xcassets in Resources */,
+				155A35DF1EE7C557006F1843 /* CollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,10 +234,12 @@
 				155A359F1EE6D345006F1843 /* FirstScreenViewController.m in Sources */,
 				155A35CA1EE6E02F006F1843 /* UserAddress+CoreDataProperties.m in Sources */,
 				155A35901EE6D2AA006F1843 /* PepsicoAssignment.xcdatamodeld in Sources */,
+				155A35E31EE7EEA5006F1843 /* FetchDBDataClass.m in Sources */,
 				155A35C91EE6E02F006F1843 /* UserAddress+CoreDataClass.m in Sources */,
 				155A35D01EE6E050006F1843 /* UserCompanyDetail+CoreDataProperties.m in Sources */,
 				155A35D61EE6E060006F1843 /* UserDetail+CoreDataProperties.m in Sources */,
 				155A35CF1EE6E050006F1843 /* UserCompanyDetail+CoreDataClass.m in Sources */,
+				155A35DE1EE7C557006F1843 /* CollectionViewCell.m in Sources */,
 				155A35841EE6D2AA006F1843 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

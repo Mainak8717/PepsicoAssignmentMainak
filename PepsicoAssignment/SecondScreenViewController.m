@@ -7,9 +7,9 @@
 //
 
 #import "SecondScreenViewController.h"
+#import "AppDelegate.h"
 
 @interface SecondScreenViewController ()
-
 @end
 
 @implementation SecondScreenViewController
@@ -17,64 +17,85 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupUI];
+    [self populateData];
+    NSLog(@"UserID == %@",self.userID);
+    
+}
+
+- (void)setupUI{
+    
     self.title = @"User Details";
     
-    UILabel *name = [[UILabel alloc] init];
-    name.backgroundColor = [UIColor blueColor];
-    [name.heightAnchor constraintEqualToConstant:50].active = true;
-    name.text = @"Name: Mainak";
+    self.lblName = [[UILabel alloc] init];
+    [self.lblName.heightAnchor constraintEqualToConstant:50].active = true;
     
-    UILabel *email = [[UILabel alloc] init];
-    email.backgroundColor = [UIColor redColor];
-    [email.heightAnchor constraintEqualToConstant:50].active = true;
-    email.text = @"Email: mainak8717@gmail.com";
+    self.lblEmail = [[UILabel alloc] init];
+    [self.lblEmail.heightAnchor constraintEqualToConstant:50].active = true;
     
-    UILabel *phone = [[UILabel alloc] init];
-    phone.backgroundColor = [UIColor yellowColor];
-    [phone.heightAnchor constraintEqualToConstant:50].active = true;
-    phone.text = @"Phone: +91 7044066268";
+    self.lblPhone = [[UILabel alloc] init];
+    [self.lblPhone.heightAnchor constraintEqualToConstant:50].active = true;
     
-    UILabel *addressStreet = [[UILabel alloc] init];
-    addressStreet.backgroundColor = [UIColor greenColor];
-    [addressStreet.heightAnchor constraintEqualToConstant:50].active = true;
-    addressStreet.text = @"Street: Kulas Light";
+    self.lblAddressStreet = [[UILabel alloc] init];
+    [self.lblAddressStreet.heightAnchor constraintEqualToConstant:50].active = true;
     
-    UILabel *addressSuite = [[UILabel alloc] init];
-    addressSuite.backgroundColor = [UIColor magentaColor];
-    [addressSuite.heightAnchor constraintEqualToConstant:50].active = true;
-    addressSuite.text = @"Suite: Apt. 556";
+    self.lblAddressSuite = [[UILabel alloc] init];
+    [self.lblAddressSuite.heightAnchor constraintEqualToConstant:50].active = true;
     
-    UILabel *addressCity = [[UILabel alloc] init];
-    addressCity.backgroundColor = [UIColor greenColor];
-    [addressCity.heightAnchor constraintEqualToConstant:50].active = true;
-    addressCity.text = @"City: Gwenborough";
+    self.lblAddressCity = [[UILabel alloc] init];
+    [self.lblAddressCity.heightAnchor constraintEqualToConstant:50].active = true;
     
-    UILabel *addressZip = [[UILabel alloc] init];
-    addressZip.backgroundColor = [UIColor orangeColor];
-    [addressZip.heightAnchor constraintEqualToConstant:50].active = true;
-    addressZip.text = @"Zipcode: 92998-3874";
+    self.lblAddressZip = [[UILabel alloc] init];
+    [self.lblAddressZip.heightAnchor constraintEqualToConstant:50].active = true;
     
-    UILabel *website = [[UILabel alloc] init];
-    website.backgroundColor = [UIColor cyanColor];
-    [website.heightAnchor constraintEqualToConstant:50].active = true;
-    website.text = @"www.google.com";
+    self.lblWebsite = [[UILabel alloc] init];
+    [self.lblWebsite.heightAnchor constraintEqualToConstant:50].active = true;
     
-
+    
     self.toDoSummaryBtn.layer.cornerRadius = 3.0f;
     self.toDoSummaryBtn.layer.borderWidth = 2.0f;
     self.toDoSummaryBtn.layer.borderColor = [UIColor blueColor].CGColor;
     
-    [self.stackView addArrangedSubview:name];
-    [self.stackView addArrangedSubview:email];
-    [self.stackView addArrangedSubview:phone];
-    [self.stackView addArrangedSubview:addressStreet];
-    [self.stackView addArrangedSubview:addressSuite];
-    [self.stackView addArrangedSubview:addressCity];
-    [self.stackView addArrangedSubview:addressZip];
+    [self.stackView addArrangedSubview:self.lblName];
+    [self.stackView addArrangedSubview:self.lblEmail];
+    [self.stackView addArrangedSubview:self.lblPhone];
+    [self.stackView addArrangedSubview:self.lblAddressStreet];
+    [self.stackView addArrangedSubview:self.lblAddressSuite];
+    [self.stackView addArrangedSubview:self.lblAddressCity];
+    [self.stackView addArrangedSubview:self.lblAddressZip];
 
-    
 }
 
+- (void)populateData{
+
+    NSManagedObjectContext *context = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).persistentContainer.viewContext;
+    NSError *error = nil;
+    
+    NSFetchRequest *userDetailRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserDetail"];
+    
+    NSArray *userDetailReqResult = [context executeFetchRequest:userDetailRequest error:&error];
+    if (!userDetailReqResult) {
+        NSLog(@"Error fetching User Details: %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+    }
+    
+    NSFetchRequest *userAddressRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserAddress"];
+    
+    NSArray *userAddressReqResult = [context executeFetchRequest:userAddressRequest error:&error];
+    if (!userAddressReqResult) {
+        NSLog(@"Error fetching User Address: %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+    }
+    
+    NSFetchRequest *userCompanyDetailsRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserCompanyDetail"];
+    
+    NSArray *userCompanyDetailsReqResult = [context executeFetchRequest:userCompanyDetailsRequest error:&error];
+    if (!userCompanyDetailsReqResult) {
+        NSLog(@"Error fetching User Address: %@\n%@", [error localizedDescription], [error userInfo]);
+        abort();
+    }
+    
+}
 - (IBAction)toDoAction:(id)sender {
     
 }

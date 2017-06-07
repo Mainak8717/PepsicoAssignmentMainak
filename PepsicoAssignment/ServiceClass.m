@@ -19,16 +19,6 @@
     return serviceManager;
 }
 
-//-(void) getUserDetails:(void (^)(NSDictionary *dictData))callback{
-//    
-//        NSURLSession *session = [NSURLSession sharedSession];
-//        NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://jsonplaceholder.typicode.com/users"]
-//                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//        }];
-//        [dataTask resume];
-//
-//}
 -(void)getJsonResponse:(NSString *)urlStr success:(void (^)(NSArray *responseDict))success failure:(void(^)(NSError* error))failure
 {
     NSURLSession *session = [NSURLSession sharedSession];
