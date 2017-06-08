@@ -78,7 +78,6 @@
 		155A35761EE6D2A9006F1843 = {
 			isa = PBXGroup;
 			children = (
-				155A35D71EE6EC31006F1843 /* CoreData */,
 				155A35811EE6D2AA006F1843 /* PepsicoAssignment */,
 				155A35801EE6D2AA006F1843 /* Products */,
 			);
@@ -95,6 +94,7 @@
 		155A35811EE6D2AA006F1843 /* PepsicoAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				155A35D71EE6EC31006F1843 /* CoreData */,
 				155A35E01EE7EE71006F1843 /* Data Access Layer */,
 				155A35851EE6D2AA006F1843 /* AppDelegate.h */,
 				155A35861EE6D2AA006F1843 /* AppDelegate.m */,
@@ -143,6 +143,7 @@
 				155A35C81EE6E02F006F1843 /* UserAddress+CoreDataProperties.m */,
 			);
 			name = CoreData;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		155A35E01EE7EE71006F1843 /* Data Access Layer */ = {
