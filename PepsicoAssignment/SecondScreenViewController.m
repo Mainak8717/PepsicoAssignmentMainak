@@ -8,6 +8,7 @@
 
 #import "SecondScreenViewController.h"
 #import "AppDelegate.h"
+#import "FetchDBDataClass.h"
 
 @interface SecondScreenViewController ()
 @end
@@ -68,32 +69,12 @@
 
 - (void)populateData{
 
-    NSManagedObjectContext *context = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).persistentContainer.viewContext;
-    NSError *error = nil;
+
     
-    NSFetchRequest *userDetailRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserDetail"];
-    
-    NSArray *userDetailReqResult = [context executeFetchRequest:userDetailRequest error:&error];
-    if (!userDetailReqResult) {
-        NSLog(@"Error fetching User Details: %@\n%@", [error localizedDescription], [error userInfo]);
-        abort();
-    }
-    
+    NSArray *userDetailsArray = [[NSArray alloc] initWithArray:[[FetchDBDataClass sharedManager] fetchUserDetails]];
+    NSArray *userAddressArray = [[NSArray alloc] initWithArray:[[FetchDBDataClass sharedManager] fetchUserAddress]];
+    NSArray *userCompanyArray = [[NSArray alloc] initWithArray:[[FetchDBDataClass sharedManager] fetchUserCompanyDetails]];
     NSFetchRequest *userAddressRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserAddress"];
-    
-    NSArray *userAddressReqResult = [context executeFetchRequest:userAddressRequest error:&error];
-    if (!userAddressReqResult) {
-        NSLog(@"Error fetching User Address: %@\n%@", [error localizedDescription], [error userInfo]);
-        abort();
-    }
-    
-    NSFetchRequest *userCompanyDetailsRequest = [NSFetchRequest fetchRequestWithEntityName:@"UserCompanyDetail"];
-    
-    NSArray *userCompanyDetailsReqResult = [context executeFetchRequest:userCompanyDetailsRequest error:&error];
-    if (!userCompanyDetailsReqResult) {
-        NSLog(@"Error fetching User Address: %@\n%@", [error localizedDescription], [error userInfo]);
-        abort();
-    }
     
 }
 - (IBAction)toDoAction:(id)sender {

@@ -11,6 +11,7 @@
 #import <CoreData/CoreData.h>
 #import "SecondScreenViewController.h"
 #import "CollectionViewCell.h"
+#import "FetchDBDataClass.h"
 
 @interface FirstScreenViewController (){
     UIActivityIndicatorView *activityView;
@@ -63,7 +64,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.responseArray = responseArry;
             [activityView stopAnimating];
-            [self insertDataIntoDB:responseArry];
+            [[FetchDBDataClass sharedManager] insertDataIntoDB:self.responseArray];
             [self.tblView reloadData];
             [self.collectionView reloadData];
         });
@@ -71,7 +72,6 @@
         
     }];
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.responseArray.count;
@@ -103,6 +103,7 @@
 {
     return CGSizeMake(220, 80);
 }
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *identifier = @"CELL";
     
@@ -113,50 +114,10 @@
     cell.layer.borderWidth = 2.0f;
     return cell;
 }
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     SecondScreenViewController *secondScreenViewController = [[SecondScreenViewController alloc] initWithNibName:@"SecondScreenViewController" bundle:nil];
     [self.navigationController pushViewController:secondScreenViewController animated:YES];
-}
-
-- (void)insertDataIntoDB:(NSArray *)responseArry{
-    
-    NSManagedObjectContext *context = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).persistentContainer.viewContext;
-    NSError *error = nil;
-
-    for (int i = 0; i<responseArry.count; i++) {
-        
-        NSManagedObject *userDetailObj = [NSEntityDescription insertNewObjectForEntityForName:@"UserDetail" inManagedObjectContext:context];
-        
-        [userDetailObj setValue:[responseArry[i] valueForKey:@"name"] forKey:@"name"];
-        [userDetailObj setValue:[responseArry[i]  valueForKey:@"email"] forKey:@"emailId"];
-        [userDetailObj setValue:[responseArry[i]  valueForKey:@"id"] forKey:@"id"];
-        [userDetailObj setValue:[responseArry[i]  valueForKey:@"phone"] forKey:@"phone"];
-        [userDetailObj setValue:[responseArry[i]  valueForKey:@"website"] forKey:@"website"];
-        [userDetailObj setValue:[responseArry[i]  valueForKey:@"username"] forKey:@"username"];
-        
-        NSManagedObject *userAddressObj = [NSEntityDescription insertNewObjectForEntityForName:@"UserAddress" inManagedObjectContext:context];
-        
-        [userAddressObj setValue:[[responseArry[i] valueForKey:@"address"] valueForKey:@"street"] forKey:@"street"];
-        [userAddressObj setValue:[[responseArry[i] valueForKey:@"address"] valueForKey:@"suite"] forKey:@"suite"];
-        [userAddressObj setValue:[[responseArry[i] valueForKey:@"address"] valueForKey:@"city"] forKey:@"city"];
-        [userAddressObj setValue:[[responseArry[i] valueForKey:@"address"] valueForKey:@"zipCode"] forKey:@"zipCode"];
-        [userAddressObj setValue:[[responseArry[i] valueForKey:@"address"] valueForKey:@"latitude"] forKey:@"latitude"];
-        [userAddressObj setValue:[[responseArry[i] valueForKey:@"address"] valueForKey:@"longitude"] forKey:@"longitude"];
-        [userAddressObj setValue:[responseArry[i]  valueForKey:@"id"] forKey:@"userId"];
-
-        NSManagedObject *userCompanyDetailObj = [NSEntityDescription insertNewObjectForEntityForName:@"UserCompanyDetail" inManagedObjectContext:context];
-        
-        [userCompanyDetailObj setValue:[[responseArry[i] valueForKey:@"company"] valueForKey:@"name"] forKey:@"name"];
-        [userCompanyDetailObj setValue:[[responseArry[i] valueForKey:@"company"] valueForKey:@"catchPhrase"] forKey:@"catchPhrase"];
-        [userCompanyDetailObj setValue:[[responseArry[i] valueForKey:@"company"] valueForKey:@"bs"] forKey:@"bs"];
-        [userCompanyDetailObj setValue:[responseArry[i]  valueForKey:@"id"] forKey:@"userId"];
-        
-        
-        if (![context save:&error]) {
-            NSLog(@"Unable to Save! %@ %@", error, [error localizedDescription]);
-        }
-    }
-
 }
 
 - (IBAction)segmentTappedAction:(id)sender {
