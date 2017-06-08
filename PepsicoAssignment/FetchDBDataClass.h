@@ -12,8 +12,8 @@
 
 + (id)sharedManager;
 
-- (void) insertDataIntoDB:(NSArray *)arrayOfData;
-- (void) fetchUserDetails;
-- (void) fetchUserAddress;
-- (void) fetchUserCompanyDetails;
+- (void)insertDataIntoDB:(NSArray *)arrayOfData;
+- (NSArray *)fetchUserDetails;
+- (NSArray *)fetchUserAddress;
+- (NSArray *)fetchUserCompanyDetails;
 @end
